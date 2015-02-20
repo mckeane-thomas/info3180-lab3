@@ -46,7 +46,12 @@ def add_header(response):
     response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
     response.headers['Cache-Control'] = 'public, max-age=600'
     return response
-
+    
+#contact form     
+@app.route('/contact')
+def contact():
+    """Render website's contact form."""
+    return render_template('contact.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
